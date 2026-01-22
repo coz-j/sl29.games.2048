@@ -40,10 +40,16 @@ def jouer_coup(plateau: List[List[int]], direction: str) -> tuple[List[List[int]
 def _creer_plateau_vide() -> List[List[int]]:
     """
     Crée une grille TAILLExTAILLE remplie de zéros.
-    :return: Une grille vide.
+    :return: Une grille de 0.
     :rtype: List[List[int]]
     """
-    raise NotImplementedError("Fonction _creer_plateau_vide non implémentée.")
+    grille = []
+    for _ in range (TAILLE) :
+        ligne = []
+        for _ in range (TAILLE) :
+            ligne.append(0)
+        grille.append(ligne)
+    return grille
 
 def _get_cases_vides(plateau: List[List[int]]) -> List[Tuple[int, int]]:
     """
