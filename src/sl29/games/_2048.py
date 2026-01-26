@@ -61,7 +61,7 @@ def _get_cases_vides(plateau: List[List[int]]) -> List[Tuple[int, int]]:
     :rtype: List[Tuple[int, int]]
     """
     resultat = []
-    for j in  range(len(plateau)) :
+    for j in range(len(plateau)) :
         for i in range(len(plateau[j])) :
             valeur = plateau[j][i]
             if valeur == 0 : 
@@ -77,7 +77,14 @@ def _ajouter_tuile(plateau: List[List[int]]) -> List[List[int]]:
     :return: Une nouvelle grille avec une tuile ajoutée.
     :rtype: List[List[int]]
     """
-    raise NotImplementedError("Fonction _ajouter_tuile non implémentée.")
+    plateau2 = plateau[:]
+    cv = _get_cases_vides(plateau2)
+    n = random.randint(0,len(cv)-1)
+    coord = cv[n]
+    ligne = coord[0]
+    col = coord[1]
+    plateau2[ligne][col] = 2
+    return plateau2
 
 def _supprimer_zeros(ligne: List[int]) -> List[int]:
     """
