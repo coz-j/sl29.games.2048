@@ -99,11 +99,13 @@ def _supprimer_zeros(ligne: List[int]) -> List[int]:
     :return: La ligne sans zéros.
     :rtype: List[int]
     """
-    listefinal = []
-    for case in ligne :
-        if case != 0 :
-            listefinal.append(case)
-    return listefinal
+    return [e for e in ligne if e != 0]
+
+    # listefinal = []
+    # for case in ligne :
+    #     if case != 0 :
+    #         listefinal.append(case)
+    # return listefinal
 
 def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
     """
