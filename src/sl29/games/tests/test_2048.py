@@ -75,7 +75,31 @@ def test__ajouter_tuile():
 
 def test__supprimer_zeros():
     print("----> Tests de _supprimer_zeros...")
-    raise NotImplementedError("Tests de _supprimer_zeros non implémentés.")
+    ligne = [0,2,2]
+    result = _supprimer_zeros(ligne)
+    attendu = [2,2]
+    assert result == attendu, f"resultat incorect : attendu : {attendu} or résultat : {result}"
+
+    ligne = [2,0,2]
+    result = _supprimer_zeros(ligne)
+    attendu = [2,2]
+    assert result == attendu, f"resultat incorect : attendu : {attendu} or résultat : {result}"
+
+    ligne = [2,2,0]
+    result = _supprimer_zeros(ligne)
+    attendu = [2,2]
+    assert result == attendu, f"resultat incorect : attendu : {attendu} or résultat : {result}"
+
+    ligne = [0,0,0]
+    result = _supprimer_zeros(ligne)
+    attendu = []
+    assert result == attendu, f"resultat incorect : attendu : {attendu} or résultat : {result}"
+
+    ligne = [2,2,2]
+    result = _supprimer_zeros(ligne)
+    attendu = [2,2,2]
+    assert result == attendu, f"resultat incorect : attendu : {attendu} or résultat : {result}"
+
     print("OK")
 
 def test__fusionner():
