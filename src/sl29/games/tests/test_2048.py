@@ -165,8 +165,8 @@ def test__deplacer_gauche():
     attendu_pts = 4 + 8 + 8 + 4 # 24 points
 
     resultat, points = _deplacer_gauche(plateau)
-    assert resultat == attendu_p
-    assert points == attendu_pts
+    assert resultat == attendu_p, f"je mattendais a {attendu_p} mais j'ai {resultat}"
+    assert points == attendu_pts, f"je mattendais a {attendu_pts} mais j'ai {points}"
     print("OK")
 
 def test__inverser_lignes():
