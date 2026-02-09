@@ -131,9 +131,9 @@ def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
 
 def _completer_zeros(ligne): # ajouter les annotations de type
     """
-    DOCSTRING À ECIRE
+    return: la ligne fusionner avec des 0 a la place des vides
     """
-    raise NotImplementedError("Fonction _completer_zeros non implémentée.")
+    return ligne + [0] * (TAILLE - len(ligne))
 
 def _deplacer_gauche(plateau) : # ajouter les annotations de type
     """
