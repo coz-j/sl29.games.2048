@@ -116,7 +116,18 @@ def _fusionner(ligne: List[int]) -> Tuple[List[int], int]:
     :return: La ligne après fusion, les points gagnés
     :rtype: Tuple[List[int], int]
     """
-    raise NotImplementedError("Fonction _fusionner non implémentée.")
+    fusion = []
+    index = 0
+    points = 0
+    while index < (len(ligne)):
+        if index+1 < (len(ligne)) and ligne[index] == ligne[index+1] :
+            points += ligne[index] + ligne[index+1]
+            fusion.append(ligne[index] + ligne[index+1])
+            index = index + 2 
+        else :
+            fusion.append(ligne[index])
+            index = index +1
+    return fusion, points
 
 def _completer_zeros(ligne): # ajouter les annotations de type
     """
